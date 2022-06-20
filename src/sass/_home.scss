@@ -1,0 +1,118 @@
+body {
+    background-image: url('../assets/gif/surroundead-decor.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+.t1 {
+    font: bold 52px $Odibee;
+}
+
+.t2 {
+    font: normal 38px $Odibee;
+}
+
+.txt {
+    font: normal 28px $Odibee;
+}
+
+header,
+main,
+footer {
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: all 1s;
+    &:hover {
+        @include mq($from: desktop) {
+            text-decoration: none;
+            opacity: 0.70;
+        }
+
+    }
+    
+
+    &:active {
+        text-decoration: none;
+        opacity: 0.70;
+    }
+}
+
+.heading-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+    height: 100%;
+    color: $primary;
+    text-align: center;
+
+    @include mq($until: tablet) {
+        grid-gap: 20px;
+    }
+
+    .link-google-play {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $primary;
+        font-weight: bold;
+        &:hover {
+            @include mq($from: desktop) {
+                transform: scale(1.25);
+            }
+        }
+        
+        @include mq($until: tablet) {
+            margin-top: 20px;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 10px;
+            }
+        }
+        
+        img {
+            max-width: 500px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            @include mq($until: tablet) {
+                margin-top: 15px;
+            }
+        }
+    }
+    .anchor-next-section {
+        margin-top: 75px;
+        @include mq($until: tablet) {
+            margin-top: 30px;
+        }
+
+        color: $primary;
+        svg {
+            animation: bounce 0.5s ease infinite alternate;  
+            @include keyframes(bounce){
+                0% {
+                    transform: translateY(0);
+                } 
+                100% {
+                    transform: translateY(-20px);
+                }
+            }
+        }
+    }
+}
+
+
+//@include mq($until: desktop) {
+       
+//}
+

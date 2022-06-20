@@ -1,0 +1,15 @@
+// Fonts Variables
+$Odibee: 'Odibee Sans';
+
+// Colors variables
+$primary: #61A8BC;
+$secondary: #140c47;
+$white: #fff;
+$black: #000;
+
+/* Keyframes */
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
